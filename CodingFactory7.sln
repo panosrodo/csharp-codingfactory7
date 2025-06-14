@@ -43,8 +43,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableStrings", "Nullable
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegEx", "RegEx\RegEx.csproj", "{17109957-B669-4D04-B102-F0F2B1BDDD36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradesApp", "GradesApp\GradesApp.csproj", "{9B4EB82F-667F-4828-BA6F-92E2ED4AF5E9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,10 +129,6 @@ Global
 		{17109957-B669-4D04-B102-F0F2B1BDDD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17109957-B669-4D04-B102-F0F2B1BDDD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17109957-B669-4D04-B102-F0F2B1BDDD36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B4EB82F-667F-4828-BA6F-92E2ED4AF5E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B4EB82F-667F-4828-BA6F-92E2ED4AF5E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B4EB82F-667F-4828-BA6F-92E2ED4AF5E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B4EB82F-667F-4828-BA6F-92E2ED4AF5E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
