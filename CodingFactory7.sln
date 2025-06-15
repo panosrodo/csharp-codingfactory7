@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodOverload", "MethodOve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOApp", "OOApp\OOApp.csproj", "{0DAAE608-E266-42B0-975A-5A5A83AA5785}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountApp", "AccountApp\AccountApp.csproj", "{FE664AFB-F5D7-4CA9-B4C9-6417AF9EF86E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{0DAAE608-E266-42B0-975A-5A5A83AA5785}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DAAE608-E266-42B0-975A-5A5A83AA5785}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DAAE608-E266-42B0-975A-5A5A83AA5785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE664AFB-F5D7-4CA9-B4C9-6417AF9EF86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE664AFB-F5D7-4CA9-B4C9-6417AF9EF86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE664AFB-F5D7-4CA9-B4C9-6417AF9EF86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE664AFB-F5D7-4CA9-B4C9-6417AF9EF86E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
