@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointApp", "PointApp\PointA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyingApp", "CopyingApp\CopyingApp.csproj", "{22548435-6258-4B68-9EB2-67C777F89D13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraction", "Fraction\Fraction.csproj", "{8D026C51-66D0-4EE1-AA97-C0C4E02A7536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesApp", "InterfacesApp\InterfacesApp.csproj", "{A5C5BDEA-7275-4850-AB84-8540846F1990}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +187,14 @@ Global
 		{22548435-6258-4B68-9EB2-67C777F89D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22548435-6258-4B68-9EB2-67C777F89D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22548435-6258-4B68-9EB2-67C777F89D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D026C51-66D0-4EE1-AA97-C0C4E02A7536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D026C51-66D0-4EE1-AA97-C0C4E02A7536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D026C51-66D0-4EE1-AA97-C0C4E02A7536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D026C51-66D0-4EE1-AA97-C0C4E02A7536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5C5BDEA-7275-4850-AB84-8540846F1990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C5BDEA-7275-4850-AB84-8540846F1990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C5BDEA-7275-4850-AB84-8540846F1990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C5BDEA-7275-4850-AB84-8540846F1990}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
