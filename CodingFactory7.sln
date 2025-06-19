@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManagement", "FileManag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppStarter", "WebAppStarter\WebAppStarter.csproj", "{73E6A81B-8D13-44C1-B97B-2DE19B81A43D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp7Starter", "WebApp7Starter\WebApp7Starter.csproj", "{773686C4-359C-4936-9C84-7A71EB648CBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -249,6 +251,10 @@ Global
 		{73E6A81B-8D13-44C1-B97B-2DE19B81A43D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73E6A81B-8D13-44C1-B97B-2DE19B81A43D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73E6A81B-8D13-44C1-B97B-2DE19B81A43D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{773686C4-359C-4936-9C84-7A71EB648CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{773686C4-359C-4936-9C84-7A71EB648CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{773686C4-359C-4936-9C84-7A71EB648CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{773686C4-359C-4936-9C84-7A71EB648CBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
