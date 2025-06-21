@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppStarter", "WebAppStar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp7Starter", "WebApp7Starter\WebApp7Starter.csproj", "{773686C4-359C-4936-9C84-7A71EB648CBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStarter7DBApp", "WebStarter7DBApp\WebStarter7DBApp.csproj", "{B55B1C28-2332-40C2-B2B8-7F1907AD8257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +257,10 @@ Global
 		{773686C4-359C-4936-9C84-7A71EB648CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{773686C4-359C-4936-9C84-7A71EB648CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{773686C4-359C-4936-9C84-7A71EB648CBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55B1C28-2332-40C2-B2B8-7F1907AD8257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55B1C28-2332-40C2-B2B8-7F1907AD8257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55B1C28-2332-40C2-B2B8-7F1907AD8257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55B1C28-2332-40C2-B2B8-7F1907AD8257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
