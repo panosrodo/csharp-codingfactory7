@@ -1,3 +1,9 @@
+using Serilog;
+using Serilog.Events;
+using WebStarter7DBApp.Configuration;
+using WebStarter7DBApp.DAO;
+using WebStarter7DBApp.Services;
+
 namespace WebStarter7DBApp
 {
     public class Program
@@ -9,6 +15,27 @@ namespace WebStarter7DBApp
             // Add services to the container.
             builder.Services.AddRazorPages();
 
+            builder.Services.AddScoped<IStudentDAO, StudentDAOImpl>();
+            builder.Services.AddScoped<IStudentService, StudentServiceImpl>();
+
+            builder.Services.AddAutoMapper(typeof(MapperConfig));
+            builder.Host.UseSerilog((context, config) =>
+            {
+                config.ReadFrom.Configuration(context.Configuration);
+                //.MinimumLevel.Debug()
+                //.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                //.Enrich.FromLogContext()
+                //.Enrich.WithAspNetCore()
+                //.WriteTo.Console()
+                //.WriteTo.File(
+                //    "Logs/logs.txt",
+                //    rollingInterval: RollingInterval.Day,
+                //    outputTemplate: "{Timestamp:dd-MM-yyyy HH:mm:ss:fff zzz} {SourceContext} [{Debug}]" +
+                //    "{Message}{NewLine}{Exception}",
+                //    retainedFileCountLimit: null,
+                //    fileSizeLimitBytes: null
+                //);
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
