@@ -22,20 +22,22 @@ namespace WebStarter7DBApp
             builder.Host.UseSerilog((context, config) =>
             {
                 config.ReadFrom.Configuration(context.Configuration);
-                //.MinimumLevel.Debug()
-                //.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                //.Enrich.FromLogContext()
-                //.Enrich.WithAspNetCore()
-                //.WriteTo.Console()
-                //.WriteTo.File(
-                //    "Logs/logs.txt",
-                //    rollingInterval: RollingInterval.Day,
-                //    outputTemplate: "{Timestamp:dd-MM-yyyy HH:mm:ss:fff zzz} {SourceContext} [{Debug}]" +
-                //    "{Message}{NewLine}{Exception}",
-                //    retainedFileCountLimit: null,
-                //    fileSizeLimitBytes: null
+                // config
+                // .MinimumLevel.Debug()
+                // .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+                // .Enrich.FromLogContext()
+                // .Enrich.WithAspNetCore()
+                // .WriteTo.Console()
+                // .WriteTo.File(
+                //     "Logs/logs.txt",
+                //     rollingInterval: RollingInterval.Day,
+                //     outputTemplate: "{Timestamp:dd-MM-yyyy HH:mm:ss:fff zzz} {SourceContext} [{Debug}] " +
+                //             "{Message}{NewLine}{Exception}",
+                //     retainedFileCountLimit: null,
+                //     fileSizeLimitBytes: null
                 //);
             });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

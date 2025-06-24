@@ -1,9 +1,12 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using System.Transactions;
 using WebStarter7DBApp.DAO;
 using WebStarter7DBApp.DTO;
 using WebStarter7DBApp.Exceptions;
 using WebStarter7DBApp.Models;
+
+
 
 namespace WebStarter7DBApp.Services
 {
@@ -19,12 +22,14 @@ namespace WebStarter7DBApp.Services
             _mapper = mapper;
             _logger = logger;
         }
+
         public StudentReadOnlyDTO? InsertStudent(StudentInsertDTO studentInsertDTO)
         {
             StudentReadOnlyDTO studentReadOnlyDTO;
             try
             {
                 using TransactionScope scope = new TransactionScope();
+
                 Student student = _mapper.Map<Student>(studentInsertDTO);
                 Student? insertedStudent = _studentDAO.Insert(student);
                 studentReadOnlyDTO = _mapper.Map<StudentReadOnlyDTO>(insertedStudent);
@@ -53,10 +58,9 @@ namespace WebStarter7DBApp.Services
             try
             {
                 using TransactionScope scope = new();
-                if (_studentDAO.GetById(studentUpdateDTO.Id) != null)
+                if (_studentDAO.GetById(studentUpdateDTO.Id) == null)
                 {
                     throw new StudentNotFoundException($"Student with id {studentUpdateDTO.Id} not found");
-
                 }
                 student = _mapper.Map<Student>(studentUpdateDTO);
                 _studentDAO.Update(student);
@@ -64,7 +68,7 @@ namespace WebStarter7DBApp.Services
             }
             catch (StudentNotFoundException ex)
             {
-                _logger.LogError("Error. Student with id {Id} not found {ErrorMessage}",
+                _logger.LogError("Error. Student with id {Id} not found. {ErrorMessage}",
                     studentUpdateDTO.Id, ex.Message);
                 throw;
             }
@@ -76,7 +80,7 @@ namespace WebStarter7DBApp.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error. Student {Id} {Firstname} {Lastname} could not updated. {ErrorMessage}",
+                _logger.LogError("Error. Student {Id} {Firstname} {Lastname} could not be updated. {ErrorMessage}",
                     studentUpdateDTO.Id, studentUpdateDTO.Firstname, studentUpdateDTO.Lastname, ex.Message);
                 throw;
             }
@@ -90,7 +94,6 @@ namespace WebStarter7DBApp.Services
                 if (_studentDAO.GetById(id) == null)
                 {
                     throw new StudentNotFoundException($"Student with id {id} not found");
-
                 }
                 _studentDAO.Delete(id);
                 scope.Complete();
@@ -104,20 +107,20 @@ namespace WebStarter7DBApp.Services
             catch (TransactionException ex)
             {
                 _logger.LogError("Error. Student with {Id} not deleted. {ErrorMessage}",
-                   id, ex.Message);
+                    id, ex.Message);
                 throw;
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error. Student {Id}  could not be deleted. {ErrorMessage}",
-                   id, ex.Message);
+                _logger.LogError("Error. Student with {Id} could not be deleted. {ErrorMessage}",
+                    id, ex.Message);
                 throw;
             }
         }
 
         public StudentReadOnlyDTO GetStudent(int id)
         {
-            StudentReadOnlyDTO studentReadOnlDTO;
+            StudentReadOnlyDTO studentReadOnlyDTO;
             Student? student;
 
             try
@@ -127,8 +130,8 @@ namespace WebStarter7DBApp.Services
                 {
                     throw new StudentNotFoundException($"Student with id {id} not found");
                 }
-                studentReadOnlDTO = _mapper.Map<StudentReadOnlyDTO>(student);
-                return studentReadOnlDTO;
+                studentReadOnlyDTO = _mapper.Map<StudentReadOnlyDTO>(student);
+                return studentReadOnlyDTO;
             }
             catch (StudentNotFoundException ex)
             {
@@ -138,15 +141,15 @@ namespace WebStarter7DBApp.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError("Error. Student {Id}  could not be returned. {ErrorMessage}",
-                   id, ex.Message);
+                _logger.LogError("Error. Student with {Id} could not be returned. {ErrorMessage}",
+                    id, ex.Message);
                 throw;
             }
         }
 
         public List<StudentReadOnlyDTO> GetAllStudents()
         {
-            StudentReadOnlyDTO studentReadOnlyDTO;
+            StudentReadOnlyDTO studentReadOnlyDto;
             List<StudentReadOnlyDTO> studentReadOnlyDTOs = new();
             List<Student> students;
 
@@ -156,18 +159,16 @@ namespace WebStarter7DBApp.Services
 
                 foreach (Student student in students)
                 {
-                    studentReadOnlyDTO = _mapper.Map<StudentReadOnlyDTO>(student);
-                    studentReadOnlyDTOs.Add(studentReadOnlyDTO);
+                    studentReadOnlyDto = _mapper.Map<StudentReadOnlyDTO>(student);
+                    studentReadOnlyDTOs.Add(studentReadOnlyDto);
                 }
                 return studentReadOnlyDTOs;
             }
             catch (Exception ex)
             {
-                {
-                    _logger.LogError("Error. Students could not be returned. {ErrorMessage}",
+                _logger.LogError("Error. Students could not be returned. {ErrorMessage}",
                     ex.Message);
-                    throw;
-                }
+                throw;
             }
         }
     }

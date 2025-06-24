@@ -5,11 +5,11 @@ namespace WebStarter7DBApp.DTO
     public class StudentUpdateDTO : BaseDTO
     {
         [Required(ErrorMessage = "Firstname is required.")]
-        [MinLength(1, ErrorMessage = "Firstname must be at least one character long.")]
+        [MinLength(1, ErrorMessage = "Firstname must be at least 1 character long.")]
         public string? Firstname { get; set; }
 
-        [Required(ErrorMessage = "Firstname is required.")]
-        [MinLength(1, ErrorMessage = "Firstname must be at least one character long.")]
+        [Required(ErrorMessage = "Lastname is required.")]
+        [MinLength(1, ErrorMessage = "Lastname must be at least 1 character long.")]
         public string? Lastname { get; set; }
 
         public StudentUpdateDTO() { }

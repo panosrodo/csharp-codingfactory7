@@ -1,4 +1,6 @@
-﻿namespace WebStarter7DBApp.DTO
+﻿using WebStarter7DBApp.DTO;
+
+namespace WebStarter7DBApp.DTO
 {
     public class StudentReadOnlyDTO : BaseDTO
     {

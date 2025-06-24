@@ -11,7 +11,6 @@ namespace WebStarter7DBApp.Configuration
             CreateMap<StudentInsertDTO, Student>().ReverseMap();
             CreateMap<StudentUpdateDTO, Student>().ReverseMap();
             CreateMap<StudentReadOnlyDTO, Student>().ReverseMap();
-
         }
     }
 }

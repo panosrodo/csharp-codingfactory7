@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 
-namespace WebStarter7DBApp.Services.DbHelper
+namespace WebStarter7DBApp.Services.DBHelper
 {
     public static class DBUtil
     {
